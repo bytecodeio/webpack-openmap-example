@@ -8,6 +8,7 @@ Installation setup:
 1) Install open layers libary
     npm install --save ol
     npm install --save @types/openlayers
+    npm install --save @types/ol
 
 2) Modify ts.config
   "typeRoots": [

@@ -23,9 +23,11 @@ export class OpenMapApi{
         return 'OpenMapLibrary.makeSampleCall()...';
     }
 
-    setMapInstance(targetDomElement: string):any{
+    setMapInstance(targetDomElement: string, latitude:number, longitude:number):any{
         
         console.log('Initializing map in div element \''+ targetDomElement +'\'');
+
+      const coords = [latitude, longitude];
 
       var mapCfg = {
         target: targetDomElement,

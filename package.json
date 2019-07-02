@@ -44,6 +44,7 @@
     "@babel/preset-typescript": "^7.3.3"
   },
   "dependencies": {
+    "@types/ol": "^5.3.3",
     "@types/openlayers": "^4.6.17",
     "ol": "^5.3.3"
   }

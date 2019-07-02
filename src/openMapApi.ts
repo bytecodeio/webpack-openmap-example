@@ -11,6 +11,8 @@ import TileLayer from "ol/layer/tile";
 import Map from "ol/map";
 import XYZ from "ol/source/xyz";
 import View from "ol/view";
+import fromLonLat from 'ol/proj.js';
+import * as ol from 'openlayers';
 
 
 //console.debug( require('ol/source/OSM'));
@@ -28,6 +30,8 @@ export class OpenMapApi{
         console.log('Initializing map in div element \''+ targetDomElement +'\'');
 
       const coords = [latitude, longitude];
+      console.debug(ol.proj.fromLonLat);
+      console.debug(fromLonLat(coords));
 
       var mapCfg = {
         target: targetDomElement,

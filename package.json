@@ -41,11 +41,10 @@
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
     "@babel/preset-env": "^7.4.1",
-    "@babel/preset-typescript": "^7.3.3"
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/openlayers": "^4.6.17"
   },
   "dependencies": {
-    "@types/ol": "^5.3.3",
-    "@types/openlayers": "^4.6.17",
     "ol": "^5.3.3"
   }
 }

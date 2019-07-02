@@ -9,3 +9,4 @@ const latitude:number = 37.773972;
 
 const mapApi = new OpenMapApi();
 mapApi.setMapInstance("mapHolder", latitude, longitude);
+

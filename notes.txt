@@ -42,3 +42,12 @@ mkdir viewer-openlayers/@types/
 
 
 
+ol.proj.fromLonLat([mapLng, mapLat])
+
+
+
+
+Wrappers:
+    OpenLayers: Provides javascript API to map functions
+    @types/openLayers
+    

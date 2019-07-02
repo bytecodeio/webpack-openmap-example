@@ -1,4 +1,43 @@
 
 
-npm install --save @types/openlayers
+
+Installation setup:
+
+(Reference: https://gitlab.com/pastdev/typescript-openlayers)
+
+1) Install open layers libary
+    npm install --save ol
+    npm install --save @types/openlayers
+
+2) Modify ts.config
+  "typeRoots": [
+    "./src/viewer-openlayers/@types/",
+    "./node_modules/@types/"
+  ]
+
+3) Create alias file:
+mkdir viewer-openlayers/@types/
+    viewer-openlayers/@types/index.d.ts:
+    declare module "ol/layer/tile" {
+        export default ol.layer.Tile;
+    }
+
+    declare module "ol/map" {
+        export default ol.Map;
+    }
+
+    declare module "ol/source/xyz" {
+        export default ol.source.XYZ;
+    }
+
+    declare module "ol/view" {
+        export default ol.View;
+    }
+
+4)Basic usage
+    import Map from "ol/map";
+
+
+
+
 

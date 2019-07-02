@@ -11,5 +11,10 @@
   },
   "include": [
     "src/**/*"
+  ],
+  "typeRoots": [
+    "./src/viewer-openlayers/@types/",
+    "./node_modules/@types/"
   ]
+
 }

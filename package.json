@@ -4,7 +4,7 @@
   "description": "A simple Webpack 4 starter with TypeScript transpilation",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --port 9000 --inline --progress --profile --colors --watch --content-base src/ --mode development",
+    "start": "webpack-dev-server --port 9001 --inline --progress --profile --colors --watch --content-base src/ --mode development",
     "build": "webpack --config webpack.config.js --mode production",
     "build.prod": "webpack --config webpack.config.js -p",
     "build.esnext": "npm run build:types && npm run build:js",
@@ -42,5 +42,9 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
     "@babel/preset-env": "^7.4.1",
     "@babel/preset-typescript": "^7.3.3"
+  },
+  "dependencies": {
+    "@types/openlayers": "^4.6.17",
+    "ol": "^5.3.3"
   }
 }

@@ -1,21 +1,17 @@
-//var osm: any = require('osm');
-//var ol: any = require('ol');
-//import {Map, View} from 'ol';
-//import {fromLonLat} from 'ol/proj';
-//var MapView: any = require('ol/View');
-//var TileLayer: any = require('ol/layer/Tile');
-//var OSM: any = require('ol/source/OSM');
-//var coordinateFunctions = require('ol/coordinate');
 
 import TileLayer from "ol/layer/tile";
 import Map from "ol/map";
 import XYZ from "ol/source/xyz";
 import View from "ol/view";
-import fromLonLat from 'ol/proj.js';
-import * as ol from 'openlayers';
 
+//import fromLonLat from 'ol/proj.js';
+//import * as ol from 'openlayers';
 
-//console.debug( require('ol/source/OSM'));
+import * as longFunctions from 'ol/proj';
+//import * from 'ol/proj';
+
+const proj = (<any>require('ol/proj'));
+//import {fromLonLat} from 'ol/proj';
 
 export class OpenMapApi{
     makeSampleCall():string{ 
@@ -25,19 +21,35 @@ export class OpenMapApi{
         return 'OpenMapLibrary.makeSampleCall()...';
     }
 
-    setMapInstance(targetDomElement: string, latitude:number, longitude:number):any{
+    setMapInstance(targetDomElement: string, latitude:number, longitude:number, zoom:number):any{
         
+      console.debug(proj);
+      console.debug(longFunctions);
+      console.debug(proj.fromLonLat([longitude, latitude]));
+      let center = proj.fromLonLat([longitude, latitude]);
+      try{
+        //let center = longFunctions.fromLonLat([longitude, latitude]);
+        //let center = longFunctions.fromLonLat([1,2]);
+      }
+      catch(e){
+
+      }
+
+        //console.debug(longFunctions.fromLonLat([longitude, latitude]));
+        //console.debug(longFunctions);
+        //console.log(fromLonLat([longitude, latitude]));
         console.log('Initializing map in div element \''+ targetDomElement +'\'');
 
+      //-13628989.639200043, 4547544.660038954
       const coords = [latitude, longitude];
-      console.debug(ol.proj.fromLonLat);
-      console.debug(fromLonLat(coords));
+      //console.debug(ol.proj.fromLonLat);
+      //console.debug(fromLonLat(coords));
 
       var mapCfg = {
         target: targetDomElement,
         view: new View({
-            center: [0, 0],
-            zoom: 2,
+            center: center,
+            zoom: zoom,
         }),
         layers: [
           new TileLayer({

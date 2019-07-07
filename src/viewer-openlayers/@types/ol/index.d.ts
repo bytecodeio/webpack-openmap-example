@@ -13,3 +13,9 @@ declare module "ol/source/xyz" {
 declare module "ol/view" {
     export default ol.View;
 }
+
+declare module "ol/proj" {
+    //export default ol.proj;
+    //export function fromLonLat(coordinate:number, opt_projection:number):any;
+    export default ol.proj;
+}

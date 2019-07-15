@@ -45,6 +45,9 @@
     "@types/openlayers": "^4.6.17"
   },
   "dependencies": {
+    "d3": "^5.9.7",
+    "d3-queue": "^3.0.7",
+    "d3.geoTile": "^1.0.1",
     "ol": "^5.3.3"
   }
 }

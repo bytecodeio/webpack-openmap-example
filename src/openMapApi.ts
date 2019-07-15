@@ -22,8 +22,10 @@ export class OpenMapApi{
     }
 
     setMapInstance(targetDomElement: string, latitude:number, longitude:number, zoom:number):any{
-        
+       
+      console.log('proj:');
       console.debug(proj);
+      console.log('longFunctions:');
       console.debug(longFunctions);
       console.debug(proj.fromLonLat([longitude, latitude]));
       let center = proj.fromLonLat([longitude, latitude]);
